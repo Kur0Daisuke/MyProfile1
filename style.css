@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Eater&family=Flow+Rounded&family=Gochi+Hand&family=Great+Vibes&family=League+Script&family=Nanum+Pen+Script&family=Pacifico&family=Pixelify+Sans&family=Qwigley&family=Redacted+Script&family=Syne+Tactile&family=Tilt+Neon&display=swap');
+
+*{
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    color: var(--font-color);
+    font-family: var(--font-family6);
+}
+
+:root{
+    --background: black;
+    --font-color:white;
+    --font-family1: 'Gochi Hand', cursive;
+    --font-family2: 'Pixelify Sans', sans-serif;
+    --font-family3: 'Pacifico', sans-serif;
+    --font-family4: 'Great Vibes', sans-serif;
+    --font-family5: 'Eater', sans-serif;
+    --font-family6: 'Tilt Neon', sans-serif;
+    --font-family7: 'Redacted Script', sans-serif;
+    --font-family8: 'Nanum Pen Script', sans-serif;
+    --font-family9: 'Syne Tactile', sans-serif;
+    --font-family10: 'League Script', sans-serif;
+    --font-family11: 'Qwigley', sans-serif;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    background-color: var(--background);
+    height: 100vh;
+    overflow: hidden;
+}
+section{
+    background: radial-gradient(
+        rgba(255,255,255,0.2) 8%,
+        transparent 8%
+    );
+    background-position: 0% 0%;
+    background-size: 3vmin 3vmin;
+    width: 100%;
+    height: 100%;
+}
+.card-content>h1{
+    padding: 0 100px;
+    height: 100%;
+}
+@keyframes questionMove {
+    from{
+        transform: translateY(5px);
+    }
+    to{
+        transform: translateY(-5px);
+    }
+}
+.fontchanger{
+    margin: 0 25px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    letter-spacing: 2px;
+    width: 225px;
+    height: 50px;
+    font-size: 1em;
+    text-shadow: 0 0 10px black;
+    -webkit-box-reflect: below -20px linear-gradient(to bottom, rgba(0,0,0,0.0),rgba(0,0,0,0.03),rgba(0,0,0,0.2));
+    animation: 10s fontChanger linear  infinite;
+}
+@keyframes fontChanger {
+    0%{
+        font-family: var(--font-family6);
+    }
+    90%{
+        font-family: var(--font-family6);
+    }
+    91%{
+        font-family: var(--font-family2);
+    }
+    92%{
+        font-family: var(--font-family3);
+    }
+    93%{
+        font-family: var(--font-family4);
+    }
+    94%{
+        font-family: var(--font-family1);
+    }
+    95%{
+        font-family: var(--font-family1);
+    }
+    96%{
+        font-family: var(--font-family7);
+    }
+    97%{
+        font-family: var(--font-family8);
+    }
+    98%{
+        font-family: var(--font-family9);
+    }
+    99%{
+        font-family: var(--font-family10);
+    }
+    100%{
+        font-family: var(--font-family11);
+    }
+}
+
+.modes{
+   width: 100%;
+   border: 0.1px solid rgba(255, 255, 255, 0.2);
+   height: 100%;
+}
+
+.changeMode>.card-content>button{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 0;
+    transition: 0.5s ease-in-out;
+    font-size: 1.2em;
+    letter-spacing: 2px;
+}
+.changeMode>.card-content>button{
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.changeMode>.card-content>button>span{
+    font-size: 4em;
+}
+
+.binarySection{
+    flex-direction: column;
+}
+
+.binarySection>*{
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+    width: 100vmax;
+}
+.sectionHead{
+    height: 10vh;
+}
+.sectionHead>*,.sectionBody>*,.sectionFoot>*{
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+    height: 100%;
+    width: 30%;
+}
+.sectionHead>*:nth-child(1),.sectionBody>*:nth-child(2){
+    width: 75%;
+}
+.sectionFoot>*:nth-child(1){
+    width: 80%;
+}
+.sectionBody{
+    height: 70vh;
+}
+.sectionFoot{
+    height: 20vh;
+}
+.card{
+    position: relative;
+    transition: 0.5s ease-in-out;
+}
+.card:hover{
+    border: 1.5px solid white;
+}
+.card::before{
+    border-radius: inherit;
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: radial-gradient(
+        800px circle at var(--mouse-x) var(--mouse-y),
+        rgb(255,255,255,0.12),transparent 40%
+    );
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 500ms;
+}
+
+.card:hover::before{
+    opacity: 1;
+}
+.card > .card-content{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.crazyLetters{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    word-wrap: break-word;
+    letter-spacing: 2px;
+    font-size: 19.9px;
+    text-overflow: ellipsis; 
+    background: -webkit-linear-gradient(#eeeeee8b, #33333320);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sectionHeader>.card-content{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.sectionHeader>.card-content::before{
+    content: '';
+    position: absolute;
+    background: rgba(255, 255, 255, 0.457);
+    height: 100%;
+    width: 60px;
+    left: 20px;
+    bottom: -10px;
+    border-radius: 30px 30px 0 0 ;
+}
+.sectionHeader>.card-content::after{
+    content: '';
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    height: 15px;
+    width: 15px;
+    left: 30px;
+    bottom: 20px;
+    border-radius: 50px;
+    box-shadow: 25px 0 rgba(0, 0, 0, 0.5);
+    animation: 1s moveeye linear alternate infinite;
+}
+@keyframes moveeye {
+    from{
+        translate: 5px 10px;
+    }
+    to{
+        translate: -5px;
+    }
+}
