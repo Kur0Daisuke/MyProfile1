@@ -49,6 +49,8 @@ section{
 .card-content>h1{
     padding: 0 100px;
     height: 100%;
+    font-size: 20px;
+    font-family: var(--font-family10);
 }
 @keyframes questionMove {
     from{
@@ -65,7 +67,7 @@ section{
     letter-spacing: 2px;
     width: 225px;
     height: 50px;
-    font-size: 1em;
+    font-size: 1.3em;
     text-shadow: 0 0 10px black;
     -webkit-box-reflect: below -20px linear-gradient(to bottom, rgba(0,0,0,0.0),rgba(0,0,0,0.03),rgba(0,0,0,0.2));
     animation: 10s fontChanger linear  infinite;
@@ -178,7 +180,7 @@ section{
         800px circle at var(--mouse-x) var(--mouse-y),
         rgb(255,255,255,0.12),transparent 40%
     );
-    z-index: 2;
+    z-index: -2;
     opacity: 0;
     transition: opacity 500ms;
 }
@@ -216,30 +218,77 @@ section{
 .sectionHeader>.card-content::before{
     content: '';
     position: absolute;
-    background: rgba(255, 255, 255, 0.457);
+    background-image: url(images/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     height: 100%;
-    width: 60px;
-    left: 20px;
-    bottom: -10px;
-    border-radius: 30px 30px 0 0 ;
+    width: 100px;
+    left: 0px;
+    top: -2px;
+    border-radius: 0 30px 30px 0 ;
 }
-.sectionHeader>.card-content::after{
+.scrollInfo{
+    -webkit-mask-image: linear-gradient(90deg,transparent, #fff 20%, #fff 80%, transparent);
+}
+.scrollInfo>div{
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    white-space: nowrap;
+    padding: 0 5px;
+    animation: autoScroll var(--t) linear infinite;
+    transform: translateX(100%);
+}
+.scrollInfo>div:nth-child(2){
+    animation-delay: calc(var(--t)/-2);
+}
+@keyframes autoScroll {
+    from{
+        transform: translateX(100%);
+    }to{
+        transform: translateX(-100%);
+    }
+}
+.scrollInfo>div>span{
+    display: flex;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    height: 35px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    letter-spacing: 0.1em;
+}
+.scrollInfo>div>span:hover{
+    cursor: pointer;
+}
+.scrollInfo>div>span>a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding: 0 10px;
+    text-decoration: none;
+    animation: rgb 5s linear infinite;
+}
+.scrollInfo>div>span>a::before{
     content: '';
     position: absolute;
-    background: rgba(0, 0, 0, 0.5);
-    height: 15px;
-    width: 15px;
-    left: 30px;
-    bottom: 20px;
-    border-radius: 50px;
-    box-shadow: 25px 0 rgba(0, 0, 0, 0.5);
-    animation: 1s moveeye linear alternate infinite;
+    background: rgba(43, 234, 255, 0.802);
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    z-index: -5;
 }
-@keyframes moveeye {
+.scrollInfo>div>span>a:hover::before{
+    opacity: 1;
+}
+.socialBox{
+    flex-direction: column;
+    padding: 10px;
+}
+@keyframes rgb {
     from{
-        translate: 5px 10px;
-    }
-    to{
-        translate: -5px;
+        filter: hue-rotate(0deg);
+    }to{
+        filter: hue-rotate(360deg);
     }
 }
