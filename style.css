@@ -262,6 +262,8 @@ section{
     cursor: pointer;
 }
 .scrollInfo>div>span>a{
+    display: flex;
+    gap: 5px;
     height: 100%;
     width: 100%;
     display: flex;
@@ -291,4 +293,112 @@ section{
     }to{
         filter: hue-rotate(360deg);
     }
+}
+
+.project{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.project>*{
+    width: 60%;
+    height: 100%;
+}
+.projectDetails{
+    width: 40%;
+}
+
+.gallery{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 75%;
+    padding: 20px;
+}
+.windowView{
+    max-width: 75%;
+    border-radius: 10px;
+    border: 4px solid rgb(67, 67, 67);
+}
+.windowView::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: red;
+}
+.mobileView{
+    position: absolute;
+    inset: 35% 80%;
+    max-width: 15%;
+    border-radius: 10px;
+    border: 4px solid rgb(67, 67, 67);
+    transition: 0.5s ease-in-out;
+}
+.gallery:hover .mobileView{
+    transform: translateX(-5px) translateY(-5px) scale(1.1);
+}
+.projectTitle{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+}
+.projectTitle>h2,.projectDetailBox>h2{
+    letter-spacing: 2px;
+    font-family: var(--font-family3);
+}
+.projectTitle>h2>span{
+    text-decoration: none;
+}
+.projectTitle>a{
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: smaller;
+    color: aqua;
+    font-family: var(--font-family4);
+}
+.projectDetailBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 20px;
+    height: 85%;
+}
+.projectDetailBox>p{
+    height: 85%;
+}
+.reactionBox{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 0;
+    border-radius: 30px 0 0 30px;
+    padding: 10px;
+}
+.reactionBox>button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    width: 50px;
+    height: 30px;
+    border-radius: 30px;
+    transition: 0.5s ease-in-out;
+}
+.reactionBox>button:hover{
+    cursor: pointer;
+    border: 2px solid rgb(211, 0, 0);
+    background: rgb(249, 69, 69);
+    width: 60px;
+    height: 30px;
+    border-radius: 30px;
+}
+.reactionBox>button>ion-icon{
+    font-size: 1.5em;
 }
