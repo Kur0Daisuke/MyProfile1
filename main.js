@@ -1,3 +1,5 @@
+const projects = document.querySelectorAll(".project");
+
 const handleMouseMove = e =>{
     const { currentTarget: target } = e;
 
@@ -25,3 +27,37 @@ function setText() {
     }
 }
 setText()
+
+// const reset = () => {projects.forEach((e) => e.classList.remove("focus"))}
+
+// function GoRight() {
+//     reset()
+//     if(currentFocus+1 >= projects.length) currentFocus=0;
+//     else currentFocus++;
+//     projects[currentFocus].classList.add("focus")
+// }
+
+// function GoLeft() {
+//     reset()
+//     if(currentFocus-1 <= 0) currentFocus=0;
+//     else currentFocus--;
+//     projects[currentFocus].classList.add("focus")
+// }
+
+let currentProject = 1
+
+function moveProject(place){
+    projects.forEach(element => {
+        element.classList.remove("focus")
+        element.classList.remove("remove")
+    });
+    
+    let nextProject = currentProject
+    place=='right' ?  currentProject==projects.length ? nextProject=1 : nextProject++ : currentProject==1 ? nextProject=projects.length : nextProject-- 
+    
+    projects[currentProject-1].classList.add("remove")
+    projects[nextProject-1].classList.add("focus")
+
+    currentProject = nextProject
+    console.log(place + currentProject)
+}
