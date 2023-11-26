@@ -270,6 +270,7 @@ section {
   cursor: pointer;
 }
 .scrollInfo > div > span > a {
+  position: relative;
   display: flex;
   gap: 5px;
   height: 100%;
@@ -277,12 +278,12 @@ section {
   display: flex;
   padding: 0 10px;
   text-decoration: none;
-  animation: rgb 5s linear infinite;
+  /* animation: rgb 5s linear infinite; */
 }
 .scrollInfo > div > span > a::before {
   content: "";
   position: absolute;
-  background: rgba(43, 234, 255, 0.802);
+  background: var(--dataColor);
   height: 100%;
   width: 100%;
   opacity: 0;
@@ -510,4 +511,20 @@ section {
   body>*{
     scale: 0.7;
   }
+}
+.social{
+    transition: 0.5s ease-in-out;
+}
+.highlight{
+    background: var(--dataColor);
+    box-shadow: 0 0 2px white,inset 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: excited 0.5s ease-in-out;
+}
+
+@keyframes excited {
+    from{
+        transform: translate(0,1px);
+    }to{
+        transform: translate(0,-1px);
+    }
 }

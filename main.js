@@ -45,3 +45,18 @@ function moveProject(place){
     currentProject = nextProject
     console.log(place + currentProject)
 }
+
+// get all social 
+const soccialMedia = document.querySelectorAll('.social')
+const languages = document.querySelectorAll('.language')
+setInterval(()=>{
+    const highlight = soccialMedia[Math.floor(Math.random()*(soccialMedia.length-1))]
+    highlight.classList.add('highlight')
+    setTimeout(()=>highlight.classList.remove('highlight'),2000)
+},2000)
+
+setInterval(()=>{
+    const highlightl = languages[Math.floor(Math.random()*(languages.length-1))]
+    highlightl.classList.add('highlight')
+    setTimeout(()=>highlightl.classList.remove('highlight'),2000)
+},2000)
