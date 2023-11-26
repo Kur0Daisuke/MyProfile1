@@ -28,22 +28,6 @@ function setText() {
 }
 setText()
 
-// const reset = () => {projects.forEach((e) => e.classList.remove("focus"))}
-
-// function GoRight() {
-//     reset()
-//     if(currentFocus+1 >= projects.length) currentFocus=0;
-//     else currentFocus++;
-//     projects[currentFocus].classList.add("focus")
-// }
-
-// function GoLeft() {
-//     reset()
-//     if(currentFocus-1 <= 0) currentFocus=0;
-//     else currentFocus--;
-//     projects[currentFocus].classList.add("focus")
-// }
-
 let currentProject = 1
 
 function moveProject(place){

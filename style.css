@@ -437,3 +437,50 @@ section{
     cursor: pointer;
     background: rgba(255, 255, 255, 0.2);
 }
+
+/* mouse trail */
+.trailBox{
+    position: absolute;
+    z-index: -1000;
+    width: 100dvw;
+    height: 100dvh;
+}
+.trail{
+    position: absolute;
+    height:5px;
+    width: 5px;
+    border-radius: 50%;
+    background: #ff1df7;
+    z-index: 10000;
+    opacity: 0;
+}
+@keyframes trailfall1 {
+    from{
+        transform: translate(0px,0px) rotateX(0deg) rotateY(0deg) scale(1);
+        opacity: 1;
+    }
+    to{
+        transform: translate(0px,50px) rotateX(90deg) rotateY(90deg) scale(0);
+        opacity: 0;
+    }
+}
+@keyframes trailfall2 {
+    from{
+        transform: translate(0px,0px) rotateX(0deg) rotateY(0deg) scale(1);
+        opacity: 1;
+    }
+    to{
+        transform: translate(0px,25px) rotateX(-90deg) rotateY(90deg) scale(0);
+        opacity: 0;
+    }
+}
+@keyframes trailfall3 {
+    from{
+        transform: translate(0px,10px) rotateX(0deg) rotateY(0deg) scale(1);
+        opacity: 1;
+    }
+    to{
+        transform: translate(0px,150px) rotateX(90deg) rotateY(-90deg) scale(0);
+        opacity: 0;
+    }
+}
