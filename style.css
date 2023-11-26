@@ -1,486 +1,513 @@
-@import url('https://fonts.googleapis.com/css2?family=Eater&family=Flow+Rounded&family=Gochi+Hand&family=Great+Vibes&family=League+Script&family=Nanum+Pen+Script&family=Pacifico&family=Pixelify+Sans&family=Qwigley&family=Redacted+Script&family=Syne+Tactile&family=Tilt+Neon&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Eater&family=Flow+Rounded&family=Gochi+Hand&family=Great+Vibes&family=League+Script&family=Nanum+Pen+Script&family=Pacifico&family=Pixelify+Sans&family=Qwigley&family=Redacted+Script&family=Syne+Tactile&family=Tilt+Neon&display=swap");
 
-*{
-    margin: 0;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    color: var(--font-color);
-    font-family: var(--font-family6);
-}
-
-:root{
-    --background: black;
-    --font-color:white;
-    --font-family1: 'Gochi Hand', cursive;
-    --font-family2: 'Pixelify Sans', sans-serif;
-    --font-family3: 'Pacifico', sans-serif;
-    --font-family4: 'Great Vibes', sans-serif;
-    --font-family5: 'Eater', sans-serif;
-    --font-family6: 'Tilt Neon', sans-serif;
-    --font-family7: 'Redacted Script', sans-serif;
-    --font-family8: 'Nanum Pen Script', sans-serif;
-    --font-family9: 'Syne Tactile', sans-serif;
-    --font-family10: 'League Script', sans-serif;
-    --font-family11: 'Qwigley', sans-serif;
+* {
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  color: var(--font-color);
+  font-family: var(--font-family6);
 }
 
-.center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+:root {
+  --background: black;
+  --font-color: white;
+  --font-family1: "Gochi Hand", cursive;
+  --font-family2: "Pixelify Sans", sans-serif;
+  --font-family3: "Pacifico", sans-serif;
+  --font-family4: "Great Vibes", sans-serif;
+  --font-family5: "Eater", sans-serif;
+  --font-family6: "Tilt Neon", sans-serif;
+  --font-family7: "Redacted Script", sans-serif;
+  --font-family8: "Nanum Pen Script", sans-serif;
+  --font-family9: "Syne Tactile", sans-serif;
+  --font-family10: "League Script", sans-serif;
+  --font-family11: "Qwigley", sans-serif;
 }
 
-body{
-    background-color: var(--background);
-    height: 100vh;
-    overflow: hidden;
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-section{
-    background: radial-gradient(
-        rgba(255,255,255,0.2) 8%,
-        transparent 8%
-    );
-    background-position: 0% 0%;
-    background-size: 3vmin 3vmin;
-    width: 100%;
-    height: 100%;
+
+body {
+  background-color: var(--background);
+  /* height: 100vh; */
+  overflow: hidden;
 }
-.card-content>h1{
-    padding: 0 100px;
-    height: 100%;
-    font-size: 20px;
-    font-family: var(--font-family10);
+section {
+  background: radial-gradient(rgba(255, 255, 255, 0.2) 8%, transparent 8%);
+  background-position: 0% 0%;
+  background-size: 3vmin 3vmin;
+  width: 100%;
+  height: 100%;
+}
+.card-content > h1 {
+  padding: 0 100px;
+  height: 100%;
+  font-size: 20px;
+  font-family: var(--font-family10);
 }
 @keyframes questionMove {
-    from{
-        transform: translateY(5px);
-    }
-    to{
-        transform: translateY(-5px);
-    }
+  from {
+    transform: translateY(5px);
+  }
+  to {
+    transform: translateY(-5px);
+  }
 }
-.fontchanger{
-    margin: 0 25px;
-    border-left: 1px solid rgba(255, 255, 255, 0.3);
-    border-right: 1px solid rgba(255, 255, 255, 0.3);
-    letter-spacing: 2px;
-    width: 225px;
-    height: 50px;
-    font-size: 1.3em;
-    text-shadow: 0 0 10px black;
-    -webkit-box-reflect: below -20px linear-gradient(to bottom, rgba(0,0,0,0.0),rgba(0,0,0,0.03),rgba(0,0,0,0.2));
-    animation: 10s fontChanger linear  infinite;
+.fontchanger {
+  margin: 0 25px;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  letter-spacing: 2px;
+  width: 225px;
+  height: 50px;
+  font-size: 1.3em;
+  text-shadow: 0 0 10px black;
+  -webkit-box-reflect: below -20px linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.2));
+  animation: 10s fontChanger linear infinite;
 }
 @keyframes fontChanger {
-    0%{
-        font-family: var(--font-family6);
-    }
-    90%{
-        font-family: var(--font-family6);
-    }
-    91%{
-        font-family: var(--font-family2);
-    }
-    92%{
-        font-family: var(--font-family3);
-    }
-    93%{
-        font-family: var(--font-family4);
-    }
-    94%{
-        font-family: var(--font-family1);
-    }
-    95%{
-        font-family: var(--font-family1);
-    }
-    96%{
-        font-family: var(--font-family7);
-    }
-    97%{
-        font-family: var(--font-family8);
-    }
-    98%{
-        font-family: var(--font-family9);
-    }
-    99%{
-        font-family: var(--font-family10);
-    }
-    100%{
-        font-family: var(--font-family11);
-    }
+  0% {
+    font-family: var(--font-family6);
+  }
+  90% {
+    font-family: var(--font-family6);
+  }
+  91% {
+    font-family: var(--font-family2);
+  }
+  92% {
+    font-family: var(--font-family3);
+  }
+  93% {
+    font-family: var(--font-family4);
+  }
+  94% {
+    font-family: var(--font-family1);
+  }
+  95% {
+    font-family: var(--font-family1);
+  }
+  96% {
+    font-family: var(--font-family7);
+  }
+  97% {
+    font-family: var(--font-family8);
+  }
+  98% {
+    font-family: var(--font-family9);
+  }
+  99% {
+    font-family: var(--font-family10);
+  }
+  100% {
+    font-family: var(--font-family11);
+  }
 }
 
-.modes{
-   width: 100%;
-   border: 0.1px solid rgba(255, 255, 255, 0.2);
-   height: 100%;
+.modes {
+  width: 100%;
+  border: 0.1px solid rgba(255, 255, 255, 0.2);
+  height: 100%;
 }
 
-.changeMode>.card-content>button{
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: 0;
-    transition: 0.5s ease-in-out;
-    font-size: 1.2em;
-    letter-spacing: 2px;
+.changeMode > .card-content > button {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 0;
+  transition: 0.5s ease-in-out;
+  font-size: 1.2em;
+  letter-spacing: 2px;
 }
-.changeMode>.card-content>button{
-    border: 1px solid rgba(255, 255, 255, 0.1);
+.changeMode > .card-content > button {
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
-.changeMode>.card-content>button>span{
-    font-size: 4em;
-}
-
-.binarySection{
-    flex-direction: column;
+.changeMode > .card-content > button > span {
+  font-size: 4em;
 }
 
-.binarySection>*{
-    border: 0.5px solid rgba(255, 255, 255, 0.1);
-    width: 100vmax;
-}
-.sectionHead{
-    height: 10vh;
-}
-.sectionHead>*,.sectionBody>*,.sectionFoot>*{
-    border: 0.5px solid rgba(255, 255, 255, 0.1);
-    height: 100%;
-    width: 30%;
-}
-.sectionHead>*:nth-child(1),.sectionBody>*:nth-child(2){
-    width: 75%;
-}
-.sectionFoot>*:nth-child(1){
-    width: 80%;
-}
-.sectionBody{
-    height: 70vh;
-}
-.sectionFoot{
-    height: 20vh;
-}
-.card{
-    position: relative;
-    transition: 0.5s ease-in-out;
-}
-.card:hover{
-    border: 1.5px solid white;
-}
-.card::before{
-    border-radius: inherit;
-    content: '';
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: radial-gradient(
-        800px circle at var(--mouse-x) var(--mouse-y),
-        rgb(255,255,255,0.12),transparent 40%
-    );
-    z-index: -2;
-    opacity: 0;
-    transition: opacity 500ms;
+.binarySection {
+  flex-direction: column;
 }
 
-.card:hover::before{
-    opacity: 1;
+.binarySection > * {
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  width: 100vmax;
 }
-.card > .card-content{
-    position: relative;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    overflow: hidden;
+.sectionHead {
+  height: 10vh;
 }
-.crazyLetters{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    word-wrap: break-word;
-    letter-spacing: 2px;
-    font-size: 19.9px;
-    text-overflow: ellipsis; 
-    background: -webkit-linear-gradient(#eeeeee8b, #33333320);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.sectionHead > *,
+.sectionBody > *,
+.sectionFoot > * {
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  height: 100%;
+  width: 30%;
+}
+.sectionHead > *:nth-child(1),
+.sectionBody > *:nth-child(2) {
+  width: 75%;
+}
+.sectionFoot > *:nth-child(1) {
+  width: 80%;
+}
+.sectionBody {
+  height: 70vh;
+}
+.sectionFoot {
+  height: 20vh;
+}
+.card {
+  position: relative;
+  transition: 0.5s ease-in-out;
+}
+.card:hover {
+  border: 1.5px solid white;
+}
+.card::before {
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    rgb(255, 255, 255, 0.12),
+    transparent 40%
+  );
+  z-index: -2;
+  opacity: 0;
+  transition: opacity 500ms;
 }
 
-.sectionHeader>.card-content{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+.card:hover::before {
+  opacity: 1;
 }
-.sectionHeader>.card-content::before{
-    content: '';
-    position: absolute;
-    background-image: url(images/logo.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100%;
-    width: 100px;
-    left: 0px;
-    top: -2px;
-    border-radius: 0 30px 30px 0 ;
+.card > .card-content {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
 }
-.scrollInfo{
-    -webkit-mask-image: linear-gradient(90deg,transparent, #fff 20%, #fff 80%, transparent);
+.crazyLetters {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  word-wrap: break-word;
+  letter-spacing: 2px;
+  font-size: 19.9px;
+  text-overflow: ellipsis;
+  background: -webkit-linear-gradient(#eeeeee8b, #33333320);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.scrollInfo>div{
-    position: absolute;
-    display: flex;
-    gap: 10px;
-    white-space: nowrap;
-    padding: 0 5px;
-    animation: autoScroll var(--t) linear infinite;
-    transform: translateX(100%);
+
+.sectionHeader > .card-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
-.scrollInfo>div:nth-child(2){
-    animation-delay: calc(var(--t)/-2);
+.sectionHeader > .card-content::before {
+  content: "";
+  position: absolute;
+  background-image: url(images/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100px;
+  left: 0px;
+  top: -2px;
+  border-radius: 0 30px 30px 0;
+}
+.scrollInfo {
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #fff 20%,
+    #fff 80%,
+    transparent
+  );
+}
+.scrollInfo > div {
+  position: absolute;
+  display: flex;
+  gap: 10px;
+  white-space: nowrap;
+  padding: 0 5px;
+  animation: autoScroll var(--t) linear infinite;
+  transform: translateX(100%);
+}
+.scrollInfo > div:nth-child(2) {
+  animation-delay: calc(var(--t) / -2);
 }
 @keyframes autoScroll {
-    from{
-        transform: translateX(100%);
-    }to{
-        transform: translateX(-100%);
-    }
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
-.scrollInfo>div>span{
-    display: flex;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    height: 35px;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.1);
-    letter-spacing: 0.1em;
+.scrollInfo > div > span {
+  display: flex;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  height: 35px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  letter-spacing: 0.1em;
 }
-.scrollInfo>div>span:hover{
-    cursor: pointer;
+.scrollInfo > div > span:hover {
+  cursor: pointer;
 }
-.scrollInfo>div>span>a{
-    display: flex;
-    gap: 5px;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    padding: 0 10px;
-    text-decoration: none;
-    animation: rgb 5s linear infinite;
+.scrollInfo > div > span > a {
+  display: flex;
+  gap: 5px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding: 0 10px;
+  text-decoration: none;
+  animation: rgb 5s linear infinite;
 }
-.scrollInfo>div>span>a::before{
-    content: '';
-    position: absolute;
-    background: rgba(43, 234, 255, 0.802);
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    z-index: -5;
+.scrollInfo > div > span > a::before {
+  content: "";
+  position: absolute;
+  background: rgba(43, 234, 255, 0.802);
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  z-index: -5;
 }
-.scrollInfo>div>span>a:hover::before{
-    opacity: 1;
+.scrollInfo > div > span > a:hover::before {
+  opacity: 1;
 }
-.socialBox{
-    flex-direction: column;
-    padding: 10px;
+.socialBox {
+  flex-direction: column;
+  padding: 10px;
 }
 @keyframes rgb {
-    from{
-        filter: hue-rotate(0deg);
-    }to{
-        filter: hue-rotate(360deg);
-    }
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
 }
 
-.project{
-    position: absolute;
-    display: flex;
-    min-width: 100%;
-    height: 100%;
-    left: 100%;
-    bottom: 100%;
-    opacity: 0;
-    /* scale: 0; */
-    transition: transform 0.5s,opacity 0.6s ease-in-out,left 0.5s ease-in-out,top 0.5s ease-in-out,scale 0.6s ease-in-out;
+.project {
+  position: absolute;
+  display: flex;
+  min-width: 100%;
+  height: 100%;
+  left: 100%;
+  bottom: 100%;
+  opacity: 0;
+  /* scale: 0; */
+  transition: transform 0.5s, opacity 0.6s ease-in-out, left 0.5s ease-in-out,
+    top 0.5s ease-in-out, scale 0.6s ease-in-out;
 }
-.project.remove{
-    left: 0;
-    bottom: 0;
-    transform: translateY(100%);
-    /* opacity: 0; */
+.project.remove {
+  left: 0;
+  bottom: 0;
+  transform: translateY(100%);
+  /* opacity: 0; */
 }
-.project.focus{
-    /* scale: 1; */
-    left: 0;
-    bottom: 0;
-    opacity: 1;
+.project.focus {
+  /* scale: 1; */
+  left: 0;
+  bottom: 0;
+  opacity: 1;
 }
-.project>*{
-    width: 60%;
-    height: 100%;
+.project > * {
+  width: 60%;
+  height: 100%;
 }
-.projectDetails{
-    width: 40%;
-}
-
-.gallery{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 75%;
-    padding: 20px;
-}
-.windowView{
-    max-width: 75%;
-    border-radius: 10px;
-    border: 4px solid rgb(67, 67, 67);
-}
-.windowView::before{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: red;
-}
-.mobileView{
-    position: absolute;
-    inset: 35% 80%;
-    max-width: 15%;
-    border-radius: 10px;
-    border: 4px solid rgb(67, 67, 67);
-    transition: 0.5s ease-in-out;
-}
-.gallery:hover .mobileView{
-    transform: translateX(-5px) translateY(-5px) scale(1.1);
-}
-.projectTitle{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 20px;
-}
-.projectTitle>h2,.projectDetailBox>h2{
-    letter-spacing: 2px;
-    font-family: var(--font-family3);
-}
-.projectTitle>h2>span{
-    text-decoration: none;
-}
-.projectTitle>a{
-    text-decoration: none;
-    letter-spacing: 1px;
-    font-size: smaller;
-    color: aqua;
-    font-family: var(--font-family4);
-}
-.projectDetailBox{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 10px;
-    padding: 20px;
-    height: 85%;
-}
-.projectDetailBox>p{
-    height: 85%;
-}
-.reactionBox{
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-right: 0;
-    border-radius: 30px 0 0 30px;
-    padding: 10px;
-}
-.reactionBox>button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    background: transparent;
-    width: 50px;
-    height: 30px;
-    border-radius: 30px;
-    transition: 0.5s ease-in-out;
-}
-.reactionBox>button:hover{
-    cursor: pointer;
-    border: 2px solid rgb(211, 0, 0);
-    background: rgb(249, 69, 69);
-    width: 60px;
-    height: 30px;
-    border-radius: 30px;
-}
-.reactionBox>button>ion-icon{
-    font-size: 1.5em;
+.projectDetails {
+  width: 40%;
 }
 
-.projectBoxOption{
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    width: 20px;
-    height: 20px;
-    padding: 10px;
-    border-radius: 30px;
-    aspect-ratio: 1/1;
-    border: 2px solid rgb(255,255,255,0.2);
-    transition: 0.5s ease-in-out;
+.gallery {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 75%;
+  padding: 20px;
 }
-.projectBoxOption:hover{
-    cursor: pointer;
-    background: rgba(255, 255, 255, 0.2);
+.windowView {
+  max-width: 75%;
+  border-radius: 10px;
+  border: 4px solid rgb(67, 67, 67);
+}
+.windowView::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: red;
+}
+.mobileView {
+  position: absolute;
+  inset: 35% 80%;
+  max-width: 15%;
+  border-radius: 10px;
+  border: 4px solid rgb(67, 67, 67);
+  transition: 0.5s ease-in-out;
+}
+.gallery:hover .mobileView {
+  transform: translateX(-5px) translateY(-5px) scale(1.1);
+}
+.projectTitle {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+.projectTitle > h2,
+.projectDetailBox > h2 {
+  letter-spacing: 2px;
+  font-family: var(--font-family3);
+}
+.projectTitle > h2 > span {
+  text-decoration: none;
+}
+.projectTitle > a {
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: smaller;
+  color: aqua;
+  font-family: var(--font-family4);
+}
+.projectDetailBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 20px;
+  height: 85%;
+}
+.projectDetailBox > p {
+  height: 85%;
+}
+.reactionBox {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 0;
+  border-radius: 30px 0 0 30px;
+  padding: 10px;
+}
+.reactionBox > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  width: 50px;
+  height: 30px;
+  border-radius: 30px;
+  transition: 0.5s ease-in-out;
+}
+.reactionBox > button:hover {
+  cursor: pointer;
+  border: 2px solid rgb(211, 0, 0);
+  background: rgb(249, 69, 69);
+  width: 60px;
+  height: 30px;
+  border-radius: 30px;
+}
+.reactionBox > button > ion-icon {
+  font-size: 1.5em;
+}
+
+.projectBoxOption {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  border-radius: 30px;
+  aspect-ratio: 1/1;
+  border: 2px solid rgb(255, 255, 255, 0.2);
+  transition: 0.5s ease-in-out;
+}
+.projectBoxOption:hover {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
 }
 
 /* mouse trail */
-.trailBox{
-    position: absolute;
-    z-index: -1000;
-    width: 100dvw;
-    height: 100dvh;
+.trailBox {
+  position: absolute;
+  z-index: -1000;
+  width: 100dvw;
+  height: 100dvh;
 }
-.trail{
-    position: absolute;
-    height:5px;
-    width: 5px;
-    border-radius: 50%;
-    background: #ff1df7;
-    z-index: 10000;
-    opacity: 0;
+.trail {
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background: #ff1df7;
+  z-index: 10000;
+  opacity: 0;
 }
 @keyframes trailfall1 {
-    from{
-        transform: translate(0px,0px) rotateX(0deg) rotateY(0deg) scale(1);
-        opacity: 1;
-    }
-    to{
-        transform: translate(0px,50px) rotateX(90deg) rotateY(90deg) scale(0);
-        opacity: 0;
-    }
+  from {
+    transform: translate(0px, 0px) rotateX(0deg) rotateY(0deg) scale(2)
+      skew(20deg);
+    opacity: 1;
+  }
+  to {
+    transform: translate(0px, 50px) rotateX(90deg) rotateY(90deg) scale(0);
+    opacity: 0;
+  }
 }
 @keyframes trailfall2 {
-    from{
-        transform: translate(0px,0px) rotateX(0deg) rotateY(0deg) scale(1);
-        opacity: 1;
-    }
-    to{
-        transform: translate(0px,25px) rotateX(-90deg) rotateY(90deg) scale(0);
-        opacity: 0;
-    }
+  from {
+    transform: translate(0px, 0px) rotateX(0deg) rotateY(0deg) scale(1.5);
+    opacity: 1;
+  }
+  to {
+    transform: translate(0px, -15px) rotateX(-90deg) rotateY(90deg) scale(0);
+    opacity: 0;
+  }
 }
 @keyframes trailfall3 {
-    from{
-        transform: translate(0px,10px) rotateX(0deg) rotateY(0deg) scale(1);
-        opacity: 1;
-    }
-    to{
-        transform: translate(0px,150px) rotateX(90deg) rotateY(-90deg) scale(0);
-        opacity: 0;
-    }
+  from {
+    transform: translate(0px, 10px) rotateX(0deg) rotateY(0deg) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translate(0px, 150px) rotateX(90deg) rotateY(-90deg) scale(0);
+    opacity: 0;
+  }
+}
+
+@media (orientation: landscape) {
+  body {
+    background-color: none;
+  }
+}
+
+@media (orientation: portrait) {
+  body{
+    rotate: 90deg;
+  }
+  body>*{
+    scale: 0.7;
+  }
 }
