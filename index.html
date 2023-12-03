@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
-<body class="center"><section class="binarySection center">
+<body>
+    <section class="binarySection center" id="main">
         <div class="sectionHead center">
             <div class="card sectionHeader">
                 <div class="card-content">
@@ -18,17 +19,20 @@
             <div class="card sectionOptions">
                 <div class="card-content">
                     <div class="modes center">
+                        <a href="#timeline"><ion-icon name="trending-up-outline"></ion-icon><p>Timeline</p></a>
+                        <a><ion-icon name="information-outline"></ion-icon><p>About</p></a>
+                        <a><ion-icon name="ellipsis-horizontal-outline"></ion-icon><p>Setting</p></a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="sectionBody center">
-            <div class="card calOptions">
+            <div class="card wText">
                 <div class="card-content">
                     <p class="crazyLetters"></p>
                 </div>
             </div>
-            <div class="card calResult">
+            <div class="card myProjects">
                 <div class="card-content">
                     <!-- project no 1 -->
                     <div class="project project1 focus">
@@ -118,62 +122,10 @@
         </div>
         <div class="sectionFoot center">
             <div class="card socialBox center">
-                <div class="card-content scrollInfo" style="--t:40s">
-                    <div>
-                        <span><a class="social" style="--dataColor:#0077b5;" href="#"><ion-icon name="logo-linkedin"></ion-icon> Linkdin</a></span>
-                        <span><a class="social" style="--dataColor:#4267B2;" href="#"><ion-icon name="logo-facebook"></ion-icon> Facebook</a></span>
-                        <span><a class="social" style="--dataColor:linear-gradient(75deg,#feda75,#fa7e1e,#d62976,#962fbf);" href="#"><ion-icon name="logo-instagram"></ion-icon> Instagram</a></span>
-                        <span><a class="social" style="--dataColor:#00ACEE;" href="#"><ion-icon name="logo-twitter"></ion-icon> Twitter</a></span>
-                        <span><a class="social" style="--dataColor:red" href="#"><ion-icon name="logo-pinterest"></ion-icon> Pinterest</a></span>
-                        <span><a class="social" style="--dataColor:linear-gradient(45deg,#f24e1e,#ff7262,#a259ff,#1abcfe,#0acf83);" href="#"><ion-icon name="logo-figma"></ion-icon> Figma</a></span>
-                        <span><a class="social" style="--dataColor:conic-gradient(#EA4335 0deg, #EA4335 105deg, #4285F4 105deg, #4285F4 185deg, #34A853 185deg, #34A853 290deg, #FBBC05 290deg);" href="#"><ion-icon name="logo-google"></ion-icon> Google</a></span>
-                        <span><a class="social" style="--dataColor:red;" href="#"><ion-icon name="logo-youtube"></ion-icon> Youtube</a></span>
-                        <span><a class="social" style="--dataColor:linear-gradient(45deg,#264de4,#2965f1);" href="#"><ion-icon name="logo-css3"></ion-icon> CSSbattle</a></span>
-                        <span><a class="social" style="--dataColor:orange;" href="#"><ion-icon name="cafe-outline"></ion-icon> Leetcode</a></span>
-                    </div>
-                    <div>
-                        <span><a class="social" style="--dataColor:#0077b5;" href="#"><ion-icon name="logo-linkedin"></ion-icon> Linkdin</a></span>
-                        <span><a class="social" style="--dataColor:#4267B2;" href="#"><ion-icon name="logo-facebook"></ion-icon> Facebook</a></span>
-                        <span><a class="social" style="--dataColor:linear-gradient(75deg,#feda75,#fa7e1e,#d62976,#962fbf);" href="#"><ion-icon name="logo-instagram"></ion-icon> Instagram</a></span>
-                        <span><a class="social" style="--dataColor:#00ACEE;" href="#"><ion-icon name="logo-twitter"></ion-icon> Twitter</a></span>
-                        <span><a class="social" style="--dataColor:red" href="#"><ion-icon name="logo-pinterest"></ion-icon> Pinterest</a></span>
-                        <span><a class="social" style="--dataColor:linear-gradient(45deg,#f24e1e,#ff7262,#a259ff,#1abcfe,#0acf83);" href="#"><ion-icon name="logo-figma"></ion-icon> Figma</a></span>
-                        <span><a class="social" style="--dataColor:conic-gradient(#EA4335 0deg, #EA4335 105deg, #4285F4 105deg, #4285F4 185deg, #34A853 185deg, #34A853 290deg, #FBBC05 290deg);" href="#"><ion-icon name="logo-google"></ion-icon> Google</a></span>
-                        <span><a class="social" style="--dataColor:red;" href="#"><ion-icon name="logo-youtube"></ion-icon> Youtube</a></span>
-                        <span><a class="social" style="--dataColor:linear-gradient(45deg,#264de4,#2965f1);" href="#"><ion-icon name="logo-css3"></ion-icon> CSSbattle</a></span>
-                        <span><a class="social" style="--dataColor:orange;" href="#"><ion-icon name="cafe-outline"></ion-icon> Leetcode</a></span>
-                    </div>
+                <div class="card-content scrollInfo socials" style="--t:40s">
                 </div>
-                <div class="card-content scrollInfo" style="--t:30s">
-                    <div>
-                        <span><a class="language" href="#"><ion-icon name="logo-html5"></ion-icon>HTML</a></span>
-                        <span><a class="language" href="#"><ion-icon name="logo-css3"></ion-icon>CSS</a></span>
-                        <span><a class="language" href="#"><ion-icon name="logo-javascript"></ion-icon>Javascript</a></span>
-                        <span><a class="language" href="#"><ion-icon name="logo-vue"></ion-icon>Vue.js</a></span>
-                        <span><a class="language" href="#"><ion-icon name="logo-react"></ion-icon>Reactjs</a></span>
-                        <span><a class="language" href="#">PHP</a></span>
-                        <span><a class="language" href="#"><ion-icon name="logo-react"></ion-icon>Laravel</a></span>
-                        <span><a class="language" href="#">JAVA</a></span>
-                        <span><a class="language" href="#"><ion-icon name="server-outline"></ion-icon>SERVLET</a></span>
-                        <span><a class="language" href="#">SpringBoot</a></span>
-                        <span><a class="language" href="#">C#</a></span>
-                        <span><a class="language" href="#">.NET</a></span>
-                    </div>
-                    <div>
-                        <span><a class="language" href="#"><ion-icon name="logo-html5"></ion-icon>HTML</a></span>
-                        <span><a class="language" href="#"><ion-icon name="logo-css3"></ion-icon>CSS</a></span>
-                        <span><a class="language" href="#"><ion-icon name="logo-javascript"></ion-icon>Javascript</a></span>
-                        <span><a class="language" href="#"><ion-icon name="logo-vue"></ion-icon>Vue.js</a></span>
-                        <span><a class="language" href="#"><ion-icon name="logo-react"></ion-icon>Reactjs</a></span>
-                        <span><a class="language" href="#">PHP</a></span>
-                        <span><a class="language" href="#"><ion-icon name="logo-react"></ion-icon>Laravel</a></span>
-                        <span><a class="language" href="#">JAVA</a></span>
-                        <span><a class="language" href="#"><ion-icon name="server-outline"></ion-icon>SERVLET</a></span>
-                        <span><a class="language" href="#">SpringBoot</a></span>
-                        <span><a class="language" href="#">C#</a></span>
-                        <span><a class="language" href="#">.NET</a></span>
-                    </div>
-                </div>
+                <div class="card-content scrollInfo scrollInfo2 languages" style="--t:30s">
+                 </div>
             </div>
             <div class="card changeMode center">
                 <div class="card-content">
@@ -191,9 +143,60 @@
             </div>
         </div>
     </section>
+
+    <!-- TimeLine section -->
+    <section id="timeline" class="timeline">
+        <a class="movePageUp center" href="#main">
+            <ion-icon name="chevron-up-outline"></ion-icon>
+        </a>
+        <!-- Timeline container -->
+        <div class="timeline-container">
+            <div class="timeline-box">
+                <div class="memory-box">
+                    <div>
+                        Oct
+                    </div>
+                    <div>
+                        Work at Ace
+                    </div>
+                </div>
+                <div class="memory-box">
+                    <div>
+                        Work at Ace
+                    </div>
+                    <div>
+                        Oct
+                    </div>
+                </div>
+                <div class="memory-box">
+                    <div>
+                        Oct
+                    </div>
+                    <div>
+                        Work at Ace
+                    </div>
+                </div>
+                <div class="memory-box">
+                    <div>
+                        Work at Ace
+                    </div>
+                    <div>
+                        Oct
+                    </div>
+                </div>
+                <p class="timeline-year">
+                    2016-2017
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- For mouse trail -->
     <div class="trailBox"></div>
+
+    <!-- scripts here -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script src="js/mousetrail.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

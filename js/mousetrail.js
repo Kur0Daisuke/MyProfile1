@@ -22,14 +22,11 @@ window.onmousemove = e => {
         dot.style.background = selectRandomColor()
         dot.style.animationFillMode = "forwards" 
         dot.style.animation = `${selectRandomTrail()} 1s linear`
-        Math
         box.appendChild(dot)
         setTimeout(()=> box.removeChild(dot),1500)
         
         last.x = current.x
         last.y = current.y
     }
-    
-    console.log(`distance - ${last}`)
 
 }

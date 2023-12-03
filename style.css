@@ -24,7 +24,9 @@
   --font-family10: "League Script", sans-serif;
   --font-family11: "Qwigley", sans-serif;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 .center {
   display: flex;
   justify-content: center;
@@ -107,11 +109,38 @@ section {
     font-family: var(--font-family11);
   }
 }
-
+.wText{
+  animation: 0.5s sLeft linear; 
+}
+.myProjects{
+  animation: 0.5s sRight linear; 
+}
 .modes {
   width: 100%;
   border: 0.1px solid rgba(255, 255, 255, 0.2);
   height: 100%;
+}
+.modes>a{
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 0;
+  font-size: 1.5em;
+  transition: 0.5s ease-in-out;
+}
+.modes>a:hover{
+  cursor: pointer;
+  background: #8a8a8a6b;
+}
+.modes>a>p{
+  transition: 0.5s ease-in-out;
+  font-size: 0em;
+}
+.modes>a:hover>p{
+  font-size: 0.6em;
 }
 
 .changeMode > .card-content > button {
@@ -122,6 +151,10 @@ section {
   transition: 0.5s ease-in-out;
   font-size: 1.2em;
   letter-spacing: 2px;
+  cursor: pointer;
+}
+.changeMode > .card-content > button:hover {
+  background: #8a8a8a2f;
 }
 .changeMode > .card-content > button {
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -140,6 +173,7 @@ section {
 }
 .sectionHead {
   height: 10vh;
+  animation: 0.5s sTop linear;
 }
 .sectionHead > *,
 .sectionBody > *,
@@ -160,6 +194,7 @@ section {
 }
 .sectionFoot {
   height: 20vh;
+  /* animation: 0.5s sBot linear; */
 }
 .card {
   position: relative;
@@ -452,7 +487,8 @@ section {
 
 /* mouse trail */
 .trailBox {
-  position: absolute;
+  position: fixed;
+  top: 0;
   z-index: -1000;
   width: 100dvw;
   height: 100dvh;
@@ -527,4 +563,137 @@ section {
     }to{
         transform: translate(0,-1px);
     }
+}
+
+@keyframes sTop{
+  from{
+    transform: translate(0,-100%);
+    opacity: 0;
+  }to{
+    transform: translate(0,0);
+    opacity: 1;
+  }
+}
+
+@keyframes sBot{
+  from{
+    transform: translate(0,100%);
+    opacity: 0;
+  }to{
+    transform: translate(0,0);
+    opacity: 1;
+  }
+}
+@keyframes sRight{
+  from{
+    transform: translate(100%,0);
+    opacity: 0;
+  }to{
+    transform: translate(0,0);
+    opacity: 1;
+  }
+}
+@keyframes sLeft{
+  from{
+    transform: translate(-100%,0);
+    opacity: 0;
+  }to{
+    transform: translate(0,0);
+    opacity: 1;
+  }
+}
+
+.canvas{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.timeline{
+  position: relative;
+  width: 100dvw;
+  height: 100dvh;
+  padding: 20px;
+}
+
+.movePageUp{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: whitesmoke;
+  overflow: hidden;
+}
+.movePageUp::before{
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 45px;
+  background: black;
+  translate: 0 23px;
+  transition: 0.5s ease-in-out;
+}.movePageUp:hover::before{
+  translate: 0 10px;
+}
+.movePageUp>*{
+  translate: 0 5px;
+  color: black;
+  font-size: 2.5em;
+  transition: 0.5s ease-in-out;
+}
+.movePageUp:hover>*{
+  translate: 0 -5px;
+}
+.timeline-container{
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  height: 80dvh;
+}
+.timeline-box{
+  position: relative;
+  width: 300px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  height: 94%;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.timeline-box>.timeline-year{
+  translate: 0 25px;
+}
+.timeline-box::before{
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 90%;
+  background: whitesmoke;
+}
+.memory-box{
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.memory-box::before{
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: white;
+  translate: 144px 0;
+  border-radius: 50%;
+  border:3px solid black;
+  outline: 2px solid white;
+}
+.memory-box>*{
+  width: 50%;
+  padding: 5px 10px;
+  text-align: center;
 }

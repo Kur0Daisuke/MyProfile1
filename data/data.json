@@ -1,0 +1,127 @@
+{
+    "socials":[
+        {
+            "name":"Linkdin",
+            "icon":"logo-linkedin",
+            "color": "#0077b5",
+            "link": ""
+        },
+        {
+            "name":"Facebook",
+            "icon":"logo-facebook",
+            "color": "#4267B2",
+            "link": ""
+        },
+        {
+            "name":"Instagram",
+            "icon":"logo-instagram",
+            "color": "linear-gradient(75deg,#feda75,#fa7e1e,#d62976,#962fbf)",
+            "link": ""
+        },
+        {
+            "name":"Twitter",
+            "icon":"logo-twitter",
+            "color": "#00ACEE",
+            "link": ""
+        },
+        {
+            "name":"Pinterest",
+            "icon":"logo-pinterest",
+            "color": "red",
+            "link": ""
+        },
+        {
+            "name":"Figma",
+            "icon":"logo-figma",
+            "color": "linear-gradient(45deg,#f24e1e,#ff7262,#a259ff,#1abcfe,#0acf83)",
+            "link": ""
+        },
+        {
+            "name":"Google",
+            "icon":"logo-google",
+            "color": "conic-gradient(#EA4335 0deg, #EA4335 105deg, #4285F4 105deg, #4285F4 185deg, #34A853 185deg, #34A853 290deg, #FBBC05 290deg)",
+            "link": ""
+        },
+        {
+            "name":"Youtube",
+            "icon":"logo-youtube",
+            "color": "red",
+            "link": ""
+        },
+        {
+            "name":"CSSbattle",
+            "icon":"logo-css3",
+            "color": "linear-gradient(45deg,#264de4,#2965f1)",
+            "link": ""
+        },
+        {
+            "name":"Leetcode",
+            "icon":"cafe-outline",
+            "color": "orange",
+            "link": ""
+        }
+    ],
+    "languages":[
+        {
+            "name":"HTML",
+            "icon":"logo-html5",
+            "color": "orange",
+            "link": ""
+        },{
+            "name":"CSS",
+            "icon":"logo-css3",
+            "color": "orange",
+            "link": ""
+        },{
+            "name":"Javascript",
+            "icon":"logo-javascript",
+            "color": "orange",
+            "link": ""
+        },{
+            "name":"Vue.js",
+            "icon":"logo-vue",
+            "color": "orange",
+            "link": ""
+        },{
+            "name":"Reactjs",
+            "icon":"logo-react",
+            "color": "orange",
+            "link": ""
+        },{
+            "name":"PHP",
+            "icon":"search-outline",
+            "color": "orange",
+            "link": ""
+        },{
+            "name":"Laravel",
+            "icon":"logo-laravel",
+            "color": "orange",
+            "link": ""
+        },{
+            "name":"JAVA",
+            "icon":"cafe-outline",
+            "color": "orange",
+            "link": ""
+        },{
+            "name":"SERVLET",
+            "icon":"server-outline",
+            "color": "orange",
+            "link": ""
+        },{
+            "name":"SPRINGBOOT",
+            "icon":"search-outline",
+            "color": "orange",
+            "link": ""
+        },{
+            "name":"C#",
+            "icon":"search-outline",
+            "color": "orange",
+            "link": ""
+        },{
+            "name":".Net",
+            "icon":"search-outline",
+            "color": "orange",
+            "link": ""
+        }
+    ]
+}

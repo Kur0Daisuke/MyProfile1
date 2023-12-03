@@ -46,17 +46,46 @@ function moveProject(place){
     console.log(place + currentProject)
 }
 
+fetch('./data/data.json')
+    .then((response) => response.json())
+    .then((json) => {
+        let parent = document.querySelector(".scrollInfo");
+        let parent2 = document.querySelector(".scrollInfo2");
+        function addSocials() {
+            let div = document.createElement("div")
+            for (let i = 0; i < json.socials.length; i++) {
+                div.innerHTML += `<span><a class="social" style="--dataColor:${json.socials[i].color};" href="#"><ion-icon name="${json.socials[i].icon}"></ion-icon>${json.socials[i].name}</a></span>`
+            }
+            parent.appendChild(div)
+        }
+        function addLanguage() {
+            let div = document.createElement("div")
+            for (let i = 0; i < json.languages.length; i++) {
+                div.innerHTML += `<span><a class="social" style="--dataColor:${json.languages[i].color};" href="#"><ion-icon name="${json.languages[i].icon}"></ion-icon>${json.languages[i].name}</a></span>`
+            }
+            parent2.appendChild(div)
+        }
+        addLanguage()
+        addLanguage()
+        addSocials()
+        addSocials()
+    });
+
+
 // get all social 
-const soccialMedia = document.querySelectorAll('.social')
-const languages = document.querySelectorAll('.language')
-setInterval(()=>{
-    const highlight = soccialMedia[Math.floor(Math.random()*(soccialMedia.length-1))]
-    highlight.classList.add('highlight')
-    setTimeout(()=>highlight.classList.remove('highlight'),2000)
-},2000)
+
 
 setInterval(()=>{
-    const highlightl = languages[Math.floor(Math.random()*(languages.length-1))]
-    highlightl.classList.add('highlight')
-    setTimeout(()=>highlightl.classList.remove('highlight'),2000)
+    let soccialMedia = document.querySelectorAll('.social')
+    let highlight = soccialMedia[Math.floor(Math.random()*(soccialMedia.length-1))]
+
+    highlight?.classList.add('highlight')
+    setTimeout(()=>highlight?.classList.remove('highlight'),2000)
+},2000)
+setInterval(()=>{
+    let languages = document.querySelectorAll('.language')
+    let highlightl = languages[Math.floor(Math.random()*(languages.length-1))]
+
+    highlightl?.classList.add('highlight')
+    setTimeout(()=>highlightl?.classList.remove('highlight'),2000)
 },2000)
