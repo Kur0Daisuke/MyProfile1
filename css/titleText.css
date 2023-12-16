@@ -1,0 +1,36 @@
+.titleText{
+    position: absolute;
+    width: 600px;
+}
+.titleText>p{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.titleText>p>span{
+    width: calc(100%/var(--s));
+    aspect-ratio: 1/1;
+    display: flex;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 2em;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: 0.5s loadInText linear;
+    animation-delay: var(--delay);
+    animation-fill-mode: forwards;
+}
+.titleText>p>span.blank{
+    border: 0;
+}
+
+@keyframes loadInText {
+    from{
+        opacity: 0;
+        transform: translateX(-5px) translateY(-5px);
+    }to{
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+    }
+}
