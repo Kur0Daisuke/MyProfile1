@@ -1,6 +1,6 @@
 .titleText{
     position: absolute;
-    width: 600px;
+    width: 300px;
 }
 .titleText>p{
     position: relative;
@@ -13,10 +13,12 @@
     width: calc(100%/var(--s));
     aspect-ratio: 1/1;
     display: flex;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    font-size: 1.5em;
+    color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 1.2em;
     text-transform: uppercase;
-    opacity: 0;
+    transform-origin: top left;
+    opacity: 1;
     animation: 0.5s loadInText linear;
     animation-fill-mode: forwards;
 }
@@ -27,7 +29,7 @@
 @keyframes loadInText {
     from{
         opacity: 0;
-        transform: scale(0) translateX(-15px) translateY(-15px);
+        transform: scale(0) translateX(10px) translateY(15px);
     }to{
         opacity: 1;
         transform: scale(1) translateX(0) translateY(0);

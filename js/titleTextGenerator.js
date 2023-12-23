@@ -1,4 +1,4 @@
-const letterInLine = 12;
+const letterInLine = 20;
 const textBox = document.querySelector(".titleTextP");
 let textToGenerate = "These days, launching applications means navigating an endless sea of complexity.";
 let sentences = ["✌HI my name is ➡thar htet zan⬅","I am a full stack developer ✌ working as a freelancer✅","You can check✔ my ❤social accounts for more detail informations"]
