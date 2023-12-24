@@ -26,15 +26,15 @@
         <div class="card sectionOptions">
           <div class="card-content">
             <div class="modes center">
-              <a href="#timeline"
+              <a href="#timeline" onclick="PlayNote()"
                 ><ion-icon name="trending-up-outline"></ion-icon>
                 <p>Timeline</p></a
               >
-              <a
+              <a onclick="PlayNote()"
                 ><ion-icon name="information-outline"></ion-icon>
                 <p>About</p></a
               >
-              <a
+              <a onclick="PlayNote()"
                 ><ion-icon name="ellipsis-horizontal-outline"></ion-icon>
                 <p>Setting</p></a
               >
@@ -251,7 +251,7 @@
       </div>
       
       <!-- up tp main -->
-      <a class="movePageUp center" href="#main">
+      <a class="movePageUp center" href="#main" onclick="PlayNote()">
         <ion-icon name="chevron-up-outline"></ion-icon>
       </a>
       <!-- Timeline container -->
@@ -325,12 +325,34 @@
     <!-- For mouse trail -->
     <div class="trailBox"></div>
 
+    <!-- audio src -->
+    <div class="audios">
+      <audio data-key="1" src="http://carolinegabriel.com/demo/js-keyboard/sounds/040.wav"></audio>
+      <audio data-key="2" src="http://carolinegabriel.com/demo/js-keyboard/sounds/041.wav"></audio>
+      <audio data-key="3" src="http://carolinegabriel.com/demo/js-keyboard/sounds/042.wav"></audio>
+      <audio data-key="4" src="http://carolinegabriel.com/demo/js-keyboard/sounds/043.wav"></audio>
+      <audio data-key="5" src="http://carolinegabriel.com/demo/js-keyboard/sounds/044.wav"></audio>
+      <audio data-key="6" src="http://carolinegabriel.com/demo/js-keyboard/sounds/045.wav"></audio>
+      <audio data-key="7" src="http://carolinegabriel.com/demo/js-keyboard/sounds/046.wav"></audio>
+      <audio data-key="8" src="http://carolinegabriel.com/demo/js-keyboard/sounds/047.wav"></audio>
+      <audio data-key="9" src="http://carolinegabriel.com/demo/js-keyboard/sounds/048.wav"></audio>
+      <audio data-key="10" src="http://carolinegabriel.com/demo/js-keyboard/sounds/049.wav"></audio>
+      <audio data-key="11" src="http://carolinegabriel.com/demo/js-keyboard/sounds/050.wav"></audio>
+      <audio data-key="12" src="http://carolinegabriel.com/demo/js-keyboard/sounds/051.wav"></audio>
+      <audio data-key="13" src="http://carolinegabriel.com/demo/js-keyboard/sounds/052.wav"></audio>
+      <audio data-key="14" src="http://carolinegabriel.com/demo/js-keyboard/sounds/053.wav"></audio>
+      <audio data-key="15" src="http://carolinegabriel.com/demo/js-keyboard/sounds/054.wav"></audio>
+      <audio data-key="16" src="http://carolinegabriel.com/demo/js-keyboard/sounds/055.wav"></audio>
+      <audio data-key="17" src="http://carolinegabriel.com/demo/js-keyboard/sounds/056.wav"></audio>
+    </div>
+
     <!-- scripts here -->
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
     ></script>
     <script src="js/mousetrail.js"></script>
+    <script src="js/note.js"></script>
     <script src="js/titleTextGenerator.js"></script>
     <script
       nomodule
