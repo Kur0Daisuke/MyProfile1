@@ -60,7 +60,8 @@ setInterval(()=>{
 setInterval(()=>{
     let languages = document.querySelectorAll('.language')
     let highlightl = languages[Math.floor(Math.random()*(languages.length-1))]
-
+    //PlayNote();
     highlightl?.classList.add('highlight')
     setTimeout(()=>highlightl?.classList.remove('highlight'),2000)
+    // setTimeout(()=>PlayNote(),1000)
 },2000)

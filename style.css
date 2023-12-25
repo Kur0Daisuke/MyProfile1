@@ -826,6 +826,7 @@ section {
   border-radius: 20px;
   /* background: #ffffff10; */
   padding: 20px;
+  display: flex;
 }
 .businessCard>.photoBox{
   position: relative;
@@ -929,5 +930,66 @@ section {
     transform: translateY(2px) rotate(3deg);
   }to{
     transform: translateY(-2px) rotate(-3deg);
+  }
+}
+.bInfoBox{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.bInfoBox>.name{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px 20px 10px;
+  margin: 0 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.429);
+  letter-spacing: 1.5px;
+}
+.bInfoBox>.name>p{
+  position: relative;
+  font-size: 1.8em;
+  width:50%;
+}
+.bInfoBox>.name>p::after{
+  content: 'Sakuta Seiya';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  font-size: 10px;
+}
+.bInfoBox>.name>p::before{
+  content: 'The one who codes';
+  position: absolute;
+  left: 40%;
+  bottom: -10px;
+  font-size: 10px;
+  font-family: var(--font-family7);
+}
+.positions{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  width: 40%;
+  right: 10px;
+}
+.positions>span{
+  font-size: 1em;
+  color: tomato;
+  /* animation: 10s movingPositions linear infinite;
+  animation-delay: var(--delay); 
+  transform: translateY(150px);
+  position: absolute;*/
+}
+
+@keyframes movingPositions {
+  0%{
+    transform: translateY(150px);
+  }30%,60%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(-150px);
   }
 }

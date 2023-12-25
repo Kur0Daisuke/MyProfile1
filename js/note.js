@@ -1,13 +1,7 @@
-let currentAudio = 1;
 function PlayNote() {
-    let audioTarget = document.querySelector(`audio[data-key="${currentAudio}"]`)
+    let random = Math.floor(Math.random() * 17)+1;
+    let audioTarget = document.querySelector(`audio[data-key="${random}"]`)
     audioTarget.play();
-
-    if(currentAudio+1 > 17) {
-        currentAudio = 1;
-    }else {
-        currentAudio++;
-    }
 }   
 
 fetch('./data/data.json')
