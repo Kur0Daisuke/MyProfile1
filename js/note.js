@@ -3,7 +3,6 @@ function PlayNote() {
     let audioTarget = document.querySelector(`audio[data-key="${currentAudio}"]`)
     audioTarget.play();
 
-    
     if(currentAudio+1 > 17) {
         currentAudio = 1;
     }else {
