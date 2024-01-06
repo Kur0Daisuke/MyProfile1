@@ -65,3 +65,11 @@ setInterval(()=>{
     setTimeout(()=>highlightl?.classList.remove('highlight'),2000)
     // setTimeout(()=>PlayNote(),1000)
 },2000)
+
+const positions = ["Software Developer","Frontend Developer","UI/UX Developer","Part-time Teacher","Freelancer"]
+const positionBox = document.querySelector(".positions")
+let positionAt = 1
+setInterval(() => {
+    positionBox.innerHTML = `<span>${positions[positionAt]}<\span>`
+    positionAt=positionAt==(positions.length-1)?0:positionAt+1
+}, 5000);
